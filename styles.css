@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+nav{
+    position: fixed;
+    top:20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+ nav a{
+    color:azure;
+    text-decoration: none;
+    /* display: inline-block;
+    animation: moveIzquierda 1s ease-in; */
+}
+.container{
+    width: 95%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    overflow: hidden;
+    
+}
+header{
+    height: auto;
+    padding: 37px;
+    width: 100%;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+img{
+    display: block;
+    height: 470px;
+    object-fit: cover;
+    width: auto;
+    animation: moveArriba 1s ease-in;
+}
+.textos{
+    width: 50%;
+    color: #fff;
+}
+.textos h1{
+   font-size: 57px;
+    color: #fff;
+    animation: moveDerecha 1s ease-in;
+}
+.textos h2{
+    font-size: 27px;
+     color: #fff;
+     animation: moveAbajo 1s ease-in;
+ }
+ .textos a{
+     display: inline-block;
+     color: #fff;
+     font-weight: 300;
+     text-decoration: none;
+     margin-top: 13px;
+     border-radius: 3px;
+     padding: 10px 0;
+     width: 130px;
+     text-align: center;
+     animation: moveIzquierda 1s ease-in;
+ }
+ .textos a:hover{
+    border: 1px solid #fff;
+ }
+ .wave{
+     height: 103px;
+     width: 100%;
+     background: #000046;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+ .wave path{
+    stroke: none; 
+    fill: #fff;
+    top: 0;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ .link{
+     position: fixed;
+     display: flex;
+     top: 0;
+     justify-content: space-around;
+     align-items: center;
+     height:100vh ;
+     left: 0;
+     flex-direction: column;
+     width: 100%;
+     transition: all 1s ease;
+     background: #a8c0ff;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ }
+ .icon{
+     display: block;
+     z-index: 10000000;
+     animation: moveIzquierda 1s ease-in;
+    
+ }
+ .one{
+    -webkit-clip-path: circle(0% at 0 0);
+    clip-path: circle(0% at 0 0);
+
+ }
+ .dos{
+    -webkit-clip-path: circle(141.4% at 0 0);
+    clip-path: circle(141.4% at 0 0);
+ }
+ @keyframes moveIzquierda{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+ }
+ @keyframes moveDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+ }
+ @keyframes moveArriba{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+    
+ }
+ @keyframes moveAbajo{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@media screen and (max-width:1027px){
+    img{
+        height: 470px;
+    }
+    .textos{
+        font-size: 33px;
+    }
+
+}
+@media screen and (max-width:800px){
+    img{
+        height: 270px;
+    }
+    .textos h1{
+        font-size: 27px;
+    }
+    .textos h2{
+        font-size: 27px;
+    }
+
+}
+@media screen and (max-width:760px), (max-width:768px){
+    img{
+        height: 270px;
+    }
+    .textos h1{
+        font-size: 37px;
+    }
+    .textos h2{
+        font-size: 19px;
+    }
+    .textos{
+        font-size: 23px;
+    }
+
+}
+@media screen and (max-width:500px), (max-width:411px){
+    img{
+        height: 130px;
+    }
+    .textos h1{
+        font-size: 27px;
+    }
+    .textos h2{
+        font-size: 17px;
+    }
+
+}
+@media screen and (max-width:330px) , (max-width:360px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .textos{
+        width: 100%;
+        text-align: 33px;
+    }
+    .textos h1{
+        font-size: 27px;
+    }
+    .textos h2{
+        font-size: 13px;
+    }
+
+}
