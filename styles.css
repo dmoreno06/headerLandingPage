@@ -1,3 +1,8 @@
+/*
+    +++++++++++++++++++++++++++++++
+                generic
+    +++++++++++++++++++++++++++++++
+*/
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +11,24 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+/*
+    +++++++++++++++++++++++++++++++
+            header / generic
+    +++++++++++++++++++++++++++++++
+*/
+header{
+    height: auto;
+    padding: 37px;
+    width: 100%;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/*
+    +++++++++++++++++++++++++++++++
+            header / navigation
+    +++++++++++++++++++++++++++++++
+*/
 nav{
     position: fixed;
     top:20px;
@@ -19,6 +42,11 @@ nav{
     /* display: inline-block;
     animation: moveIzquierda 1s ease-in; */
 }
+/*
+    +++++++++++++++++++++++++++++++
+            header / container
+    +++++++++++++++++++++++++++++++
+*/
 .container{
     width: 95%;
     max-width: 1300px;
@@ -29,14 +57,7 @@ nav{
     overflow: hidden;
     
 }
-header{
-    height: auto;
-    padding: 37px;
-    width: 100%;
-    background: #000046;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+
 img{
     display: block;
     height: 470px;
@@ -73,6 +94,48 @@ img{
  .textos a:hover{
     border: 1px solid #fff;
  }
+
+ /*
+    +++++++++++++++++++++++++++++++
+            header /nav/ container
+    +++++++++++++++++++++++++++++++
+*/
+ .link{
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-around;
+    align-items: center;
+    height:100vh ;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+    background: #a8c0ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.icon{
+    display: block;
+    z-index: 10000000;
+    animation: moveIzquierda 1s ease-in;
+   
+}
+.one{
+   -webkit-clip-path: circle(0% at 0 0);
+   clip-path: circle(0% at 0 0);
+
+}
+.dos{
+   -webkit-clip-path: circle(141.4% at 0 0);
+   clip-path: circle(141.4% at 0 0);
+}
+ /*
+    +++++++++++++++++++++++++++++++
+                wave animation
+    +++++++++++++++++++++++++++++++
+*/
  .wave{
      height: 103px;
      width: 100%;
@@ -87,38 +150,12 @@ img{
     margin: 0;
     padding: 0;
  }
- 
- .link{
-     position: fixed;
-     display: flex;
-     top: 0;
-     justify-content: space-around;
-     align-items: center;
-     height:100vh ;
-     left: 0;
-     flex-direction: column;
-     width: 100%;
-     transition: all 1s ease;
-     background: #a8c0ff;  /* fallback for old browsers */
-     background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
-     background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /*
+    +++++++++++++++++++++++++++++++
+            animations
+    +++++++++++++++++++++++++++++++
+*/
 
- }
- .icon{
-     display: block;
-     z-index: 10000000;
-     animation: moveIzquierda 1s ease-in;
-    
- }
- .one{
-    -webkit-clip-path: circle(0% at 0 0);
-    clip-path: circle(0% at 0 0);
-
- }
- .dos{
-    -webkit-clip-path: circle(141.4% at 0 0);
-    clip-path: circle(141.4% at 0 0);
- }
  @keyframes moveIzquierda{
     0%{
         opacity: 0;
@@ -160,6 +197,12 @@ img{
         transform: translate(0);
     }
 }
+
+  /*
+    +++++++++++++++++++++++++++++++
+            media querys
+    +++++++++++++++++++++++++++++++
+*/
 @media screen and (max-width:1027px){
     img{
         height: 470px;
